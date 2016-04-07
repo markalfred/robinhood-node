@@ -118,6 +118,12 @@ function RobinhoodWebApi(opts, callback) {
       }, callback);
   };
 
+  api.reverse_instrument = function(hash, callback){
+    return _request.get({
+        uri: _endpoints.instruments + hash
+      }, callback);
+  };
+
   api.quote_data = function(symbol, callback){
     return _request.get({
         uri: _endpoints.quotes,
